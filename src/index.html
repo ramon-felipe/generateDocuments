@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Docs</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="css/libs/bootstrap.min.css">
+		<!-- build:css css/estilo.css -->
+		<link rel="stylesheet" href="css/general.css">
+		<link rel="stylesheet" href="css/index.css">
+		<!-- endbuild -->
+	</head>
+	<body class="">
+		<header id="header"></header>
+
+		<main class="container mb-5">
+			<div class="row justify-content-center">
+
+				<!----------------------->
+				<!-- GERADOR DOCUMENTO -->
+				<!----------------------->
+				<div class="col-lg-6 col-md-6 mt-3 generate-document">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title text-center">
+								Gerar Documento
+							</h5>
+
+							<form>
+								<div class="form-row justify-content-center">
+									<div class="col-md-10 col-lg-8">
+										<div class="form-group">
+									    <small class="form-text text-muted">Selecione o documento abaixo:</small>
+									    <select class="form-control" id="cboDocumentos">
+									      <option value="cnpj">CNPJ</option>
+									      <option value="cpf">CPF</option>
+									      <option value="rg">RG</option>
+									    </select>
+									  </div><!-- end form-group -->
+									</div><!-- end col -->
+								</div><!--end form-row -->
+
+								<div class="form-row text-center">
+									<div class="col-sm-12 col-md-12">
+										<div class="form-group">
+											<button class="btn btn-primary" id="btnGeraDoc">Gerar CNPJ</button>
+										</div><!-- end form-group -->
+									</div><!-- end col -->
+								</div><!--end form-row -->
+
+								<div class="form-row justify-content-center">
+									<div class="col-md-10 col-lg-8">
+										<div class="form-group">
+							    		<input type="text" class="form-control text-center" id="txtDoc" disabled value="">
+											<input type="hidden" id="txtDocHidden"  />
+										</div><!-- end form-group -->
+									</div><!-- end col -->
+								</div><!--end form-row -->
+
+								<div class="form-row justify-content-center">
+									<div class="form-check">
+								    <input type="checkbox" class="form-check-input" id="chkOnlyNumbers">
+								    <label class="form-check-label small text-muted" for="chkOnlyNumbers">Apenas números</label>
+								  </div><!-- end col -->
+								</div><!--end form-row -->
+
+								<div class="form-row">
+									<div class="alert alert-warning col-md-10 col-lg-8 text-center hide-message" role="alert" id="generationMessage" ></div>
+								</div>
+							</form>
+						</div><!-- end card-body -->
+					</div><!-- end card -->
+				</div>
+				<!--------------------------->
+				<!-- FIM GERADOR DOCUMENTO -->
+				<!--------------------------->
+
+				<div class="col-12 general-message">
+					<div class="alert alert-warning text-center hide-message mt-3 mb-0" role="alert" id="generalMessage" ></div>
+				</div>
+
+				<!------------------------->
+				<!-- VALIDADOR DOCUMENTO -->
+				<!------------------------->
+				<div class="col-lg-6 col-md-6 mt-3 mb-5 validate-document">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title text-center">
+								Validar Documento
+							</h5>
+
+							<form>
+								<div class="form-row justify-content-center">
+									<div class="col-md-10 col-lg-8">
+										<div class="form-group">
+									    <small class="form-text text-muted">Selecione o documento abaixo:</small>
+									    <select class="form-control" id="cboDocumentosValidacao">
+												<option value="cnpj">CNPJ</option>
+												<option value="cpf">CPF</option>
+									      <option value="rg">RG</option>
+									    </select>
+									  </div><!-- end form-group -->
+									</div><!-- end col -->
+								</div><!--end form-row -->
+
+								<div class="form-row justify-content-center">
+									<div class="col-md-10 col-lg-8">
+										<div class="form-group">
+											<small class="form-text text-muted">Digite o número do documento abaixo:</small>
+							    		<input type="text" class="form-control text-center" id="txtDocValidacao" maxlength="30" value="">
+										</div><!-- end form-group -->
+									</div><!-- end col -->
+
+									<div class="alert col-md-10 col-lg-8 text-center hide-message" role="alert" id="validationMessage" >
+									</div>
+								</div><!--end form-row -->
+
+							</form>
+						</div><!-- end card-body -->
+					</div><!-- end card -->
+				</div>
+				<!----------------------------->
+				<!-- FIM VALIDADOR DOCUMENTO -->
+				<!----------------------------->
+
+			</div>
+		</main>
+
+		<!------------>
+		<!-- FOOTER -->
+		<!------------>
+		<footer id="footer"></footer>
+	</body>
+	<script src="js/libs/jquery.min.js"></script>
+	<!-- build:js js/script.js -->
+	<script src="js/index.js"></script>
+	<script src="js/format.js"></script>
+	<script src="js/general.js"></script>
+	<!-- endbuild -->
+</html>

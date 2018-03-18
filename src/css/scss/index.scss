@@ -1,0 +1,15 @@
+.hide-message{
+  display: none;
+}
+
+@media only screen and (min-width:768px) {
+  .general-message{
+    order: 1;
+  }
+  .generate-document{
+    order: 2;
+  }
+  .validate-document{
+    order: 3;
+  }
+}
